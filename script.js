@@ -1,5 +1,6 @@
 const storyElement = document.getElementById('story');
 const choicesElement = document.getElementById('choices');
+const startButton = document.getElementById('start-button');
 
 const story = {
     start: {
@@ -74,7 +75,10 @@ const story = {
     }
 };
 
+startButton.addEventListener('click', startGame);
+
 function startGame() {
+    startButton.style.display = 'none';
     showStory("start");
 }
 
@@ -89,5 +93,3 @@ function showStory(storyNode) {
         choicesElement.appendChild(button);
     });
 }
-
-startGame();
